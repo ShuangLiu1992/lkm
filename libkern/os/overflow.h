@@ -54,9 +54,7 @@ __os_warn_unused(__const bool x)
 	return x;
 }
 
-#if __has_builtin(__builtin_add_overflow) && \
-        __has_builtin(__builtin_sub_overflow) && \
-        __has_builtin(__builtin_mul_overflow)
+#if true
 
 #define os_add_overflow(a, b, res) __os_warn_unused(__builtin_add_overflow((a), (b), (res)))
 #define os_sub_overflow(a, b, res) __os_warn_unused(__builtin_sub_overflow((a), (b), (res)))
